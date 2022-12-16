@@ -1,0 +1,48 @@
+package com.deloitte.jio.model;
+
+import java.util.List;
+
+import com.deloitte.jio.entity.Customer;
+
+
+public class Response {
+	
+	
+	private Customer customer;
+	private List<JioMart> jiom;
+	private Recharge recharge;
+	public Response() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Response(Customer customer, List<JioMart> jiom, Recharge recharge) {
+		super();
+		this.customer = customer;
+		this.jiom = jiom;
+		this.recharge = recharge;
+	}
+	public Response(Customer customer, List<JioMart> jiom) {
+		super();
+		this.customer = customer;
+		this.jiom = jiom;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	public List<JioMart> getJiom() {
+		return jiom;
+	}
+	public void setJiom(List<JioMart> jiom) {
+		this.jiom = jiom;
+	}
+	public Recharge getRecharge() {
+		return recharge;
+	}
+	public void setRecharge(Recharge recharge) {
+		this.recharge = recharge;
+	}
+	
+}

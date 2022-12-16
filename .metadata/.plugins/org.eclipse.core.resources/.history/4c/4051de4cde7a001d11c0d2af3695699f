@@ -1,0 +1,38 @@
+package com.deloitte.jiomart.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.deloitte.jiomart.service.JioMartService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@RestController
+@RequestMapping("/JioMart")
+public class JioMartController {
+	
+	@Autowired
+	private JioMartService jservice;
+	
+	@Autowired
+	private RestTemplate rtemp;
+ 	
+	@GetMapping("/get/{id}")
+	@HystrixCommand(fallbackMethod="orderFailureFallback")
+	public ResponseEntity<?> getProducts(@PathVariable("id") Integer id)
+	{
+		JioMart jiom=jservice.
+		List<Order> ordersList=restTemplate.getForObject("http://localhost:8081/orders/getOrder/"+id,List.class);
+		Response response = new Response(customer,ordersList);
+		return new ResponseEntity<Response>(response,HttpStatus.OK);
+	}
+ 
+	
+	
+	
+
+}

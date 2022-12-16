@@ -1,0 +1,5 @@
+package com.deloitte.jiomart.model;
+
+public class Response {
+
+}

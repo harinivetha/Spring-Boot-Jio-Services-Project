@@ -1,0 +1,37 @@
+package com.deloitte.jio.model;
+
+import java.util.List;
+
+public class Response2 {
+
+	JioMart jiom;
+	List<Order> ordersList;
+	public Response2() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Response2(JioMart jiom, List<Order> ordersList) {
+		super();
+		this.jiom = jiom;
+		this.ordersList = ordersList;
+	}
+	public JioMart getJiom() {
+		return jiom;
+	}
+	public void setJiom(JioMart jiom) {
+		this.jiom = jiom;
+	}
+	public List<Order> getOrdersList() {
+		return ordersList;
+	}
+	public void setOrdersList(List<Order> ordersList) {
+		this.ordersList = ordersList;
+	}
+	@Override
+	public String toString() {
+		return "Response2 [jiom=" + jiom + ", ordersList=" + ordersList + "]";
+	}
+	
+	
+	
+}

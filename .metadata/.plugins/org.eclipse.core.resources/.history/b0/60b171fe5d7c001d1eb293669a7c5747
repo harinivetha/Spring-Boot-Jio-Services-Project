@@ -1,0 +1,13 @@
+package com.deloitte.jio.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.deloitte.jio.entity.Customer;
+
+public interface JioRepository extends JpaRepository<Customer, Integer>{
+
+	public List<Customer> findByCustomerId(Integer customerId);
+	
+}

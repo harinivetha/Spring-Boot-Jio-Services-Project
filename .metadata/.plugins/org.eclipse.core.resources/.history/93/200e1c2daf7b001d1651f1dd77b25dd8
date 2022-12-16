@@ -1,0 +1,11 @@
+package com.deloitte.recharge.entity;
+
+public class Recharge {
+
+	private int planId;
+	private String planName;
+	private String validity;
+	private String planDataPerDay;
+	
+	
+}

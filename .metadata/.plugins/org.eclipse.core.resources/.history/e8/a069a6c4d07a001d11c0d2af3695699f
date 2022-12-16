@@ -1,0 +1,14 @@
+package com.deloitte.jiomart;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableEurekaClient
+public class JioMartMicroserviceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JioMartMicroserviceApplication.class, args);
+	}
+
+}

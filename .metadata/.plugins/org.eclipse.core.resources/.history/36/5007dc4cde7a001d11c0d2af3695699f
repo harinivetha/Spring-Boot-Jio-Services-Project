@@ -1,0 +1,5 @@
+package com.deloitte.jiomart.dao;
+
+public interface JioMartRepository {
+
+}

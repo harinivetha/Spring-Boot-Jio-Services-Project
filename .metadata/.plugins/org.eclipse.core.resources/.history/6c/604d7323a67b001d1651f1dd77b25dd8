@@ -1,0 +1,5 @@
+package com.deloitte.Order;
+
+public interface JioMartConsumer {
+
+}

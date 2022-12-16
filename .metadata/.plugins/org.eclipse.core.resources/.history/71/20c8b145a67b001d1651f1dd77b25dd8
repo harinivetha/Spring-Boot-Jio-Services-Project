@@ -1,0 +1,6 @@
+package com.deloitte.Order;
+
+@FeignCLient("Eureka-Client")
+public interface JioMartConsumer {
+
+}

@@ -1,0 +1,8 @@
+package com.deloitte.Order;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("Eureka-Client")
+public interface JioMartConsumer {
+
+}

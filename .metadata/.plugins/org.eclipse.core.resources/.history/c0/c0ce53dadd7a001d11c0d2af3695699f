@@ -1,0 +1,5 @@
+package com.deloitte.jiomart.entity;
+
+public class JioMart {
+
+}

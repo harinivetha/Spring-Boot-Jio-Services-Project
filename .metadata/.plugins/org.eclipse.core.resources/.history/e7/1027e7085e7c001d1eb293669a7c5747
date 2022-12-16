@@ -1,0 +1,51 @@
+package com.deloitte.jio.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.deloitte.jio.entity.Customer;
+import com.deloitte.jio.repository.JioRepository;
+import com.deloitte.jio.service.JioService;
+
+@RestController
+@RequestMapping("/Jio")
+public class JioController {
+	
+	@Autowired
+	private JioService jservice;
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Autowired
+	private JioRepository jrep;
+	
+	@GetMapping("/getCustomer/{id}")
+	public ResponseEntity<List<Customer>> getCustomerById(@PathVariable("id") Integer cid)
+	{
+		List<Customer> orderList = jrep.findByCustomerId(cid);
+		return new ResponseEntity<List<Customer>>(orderList,HttpStatus.OK);
+	}
+	
+	@GetMapping("/getCustomerByName/{name}")
+	public ResponseEntity<Customer> getCustomerById(@PathVariable("name") String customername)
+	{
+		Customer orderList = jrep.findByCustomerName(customername);
+		return new ResponseEntity<Customer>(orderList,HttpStatus.OK);
+	}
+	
+	
+	
+	
+	
+	
+
+}
